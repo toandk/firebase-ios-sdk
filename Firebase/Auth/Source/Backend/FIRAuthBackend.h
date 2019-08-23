@@ -13,8 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+ 
 #import <Foundation/Foundation.h>
+
+#import "FIRAuthRPCRequest.h"
+#import "FIRAuthRPCResponse.h"
 
 @class FIRAuthRequestConfiguration;
 @class FIRCreateAuthURIRequest;
@@ -239,6 +242,8 @@ typedef void (^FIRSignInWithGameCenterResponseCallback)
     @return The Firebase Auth user agent.
  */
 + (NSString *)authUserAgent;
+
++ (id<FIRAuthBackendImplementation>)implementation;
 
 /** @fn setBackendImplementation:
     @brief Changes the default backend implementation to something else.
@@ -593,6 +598,10 @@ typedef void (^FIRSignInWithGameCenterResponseCallback)
  */
 - (void)resetPassword:(FIRResetPasswordRequest *)request
              callback:(FIRResetPasswordCallback)callback;
+
+- (void)postWithRequest:(id<FIRAuthRPCRequest>)request
+               response:(id<FIRAuthRPCResponse>)response
+               callback:(void (^)(NSError * _Nullable error))callback;
 
 @end
 

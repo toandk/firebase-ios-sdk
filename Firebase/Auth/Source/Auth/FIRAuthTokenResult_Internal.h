@@ -25,12 +25,7 @@
  */
 @interface FIRAuthTokenResult () <NSSecureCoding>
 
-- (instancetype)initWithToken:(NSString *)token
-               expirationDate:(NSDate *)expirationDate
-                     authDate:(NSDate *)authDate
-                 issuedAtDate:(NSDate *)issuedAtDate
-               signInProvider:(NSString *)signInProvider
-                       claims:(NSDictionary *)claims;
++ (nullable FIRAuthTokenResult *)tokenResultWithToken:(NSString *)token;
 
 @end
 

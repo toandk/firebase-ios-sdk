@@ -20,7 +20,9 @@
 #import <Foundation/Foundation.h>
 
 @class FIRAuth;
+@class FIRMultiFactorSession;
 @class FIRPhoneAuthCredential;
+@class FIRPhoneMultiFactorInfo;
 @protocol FIRAuthUIDelegate;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -58,7 +60,6 @@ NS_SWIFT_NAME(PhoneAuthProvider)
 
 /** @fn providerWithAuth:
     @brief Returns an instance of `FIRPhoneAuthProvider` for the provided `FIRAuth` object.
-
     @param auth The auth object to associate with the phone auth provider instance.
  */
 + (instancetype)providerWithAuth:(FIRAuth *)auth NS_SWIFT_NAME(provider(auth:));
@@ -83,6 +84,16 @@ NS_SWIFT_NAME(PhoneAuthProvider)
 - (void)verifyPhoneNumber:(NSString *)phoneNumber
                UIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
                completion:(nullable FIRVerificationResultCallback)completion;
+
+- (void)verifyPhoneNumber:(NSString *)phoneNumber
+               UIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
+       multiFactorSession:(nullable FIRMultiFactorSession *)session
+               completion:(nullable FIRVerificationResultCallback)completion; // TODO: use for sign in?
+
+- (void)verifyPhoneNumberWithMultiFactorInfo:(FIRPhoneMultiFactorInfo *)phoneMultiFactorInfo
+                                  UIDelegate:(nullable id<FIRAuthUIDelegate>)UIDelegate
+                          multiFactorSession:(nullable FIRMultiFactorSession *)session
+                                  completion:(nullable FIRVerificationResultCallback)completion;
 
 /** @fn credentialWithVerificationID:verificationCode:
     @brief Creates an `FIRAuthCredential` for the phone number provider identified by the

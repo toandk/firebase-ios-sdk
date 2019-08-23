@@ -49,7 +49,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (nullable instancetype)initWithEndpoint:(NSString *)endpoint
                      requestConfiguration:(FIRAuthRequestConfiguration *)requestConfiguration
-                         NS_DESIGNATED_INITIALIZER;
+NS_DESIGNATED_INITIALIZER;
+
+// TODO(chuanr): Temp method. To be removed once the identity platform endpoints are ready.
+- (nullable instancetype)initWithEndpoint:(NSString *)endpoint
+                     requestConfiguration:(FIRAuthRequestConfiguration *)requestConfiguration
+                      useIdentityPlatform:(BOOL)useIdentityPlatform
+                               useStaging:(BOOL)useStaging;
 
 /** @fn requestURL
     @brief Gets the request's full URL.

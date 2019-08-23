@@ -117,6 +117,14 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (BOOL)signOutByForceWithUserID:(NSString *)userID error:(NSError *_Nullable *_Nullable)error;
 
+- (void)completeSignInWithAccessToken:(nullable NSString *)accessToken
+            accessTokenExpirationDate:(nullable NSDate *)accessTokenExpirationDate
+                         refreshToken:(nullable NSString *)refreshToken
+                            anonymous:(BOOL)anonymous
+                             callback:(FIRAuthResultCallback)callback;
+
+- (FIRAuthDataResultCallback)signInFlowAuthDataResultCallbackByDecoratingCallback:(nullable FIRAuthDataResultCallback)callback;
+
 @end
 
 NS_ASSUME_NONNULL_END

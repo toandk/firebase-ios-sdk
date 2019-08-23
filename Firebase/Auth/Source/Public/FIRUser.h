@@ -18,6 +18,7 @@
 
 #import "FIRAuth.h"
 #import "FIRAuthDataResult.h"
+#import "FIRMultiFactor.h"
 #import "FIRUserInfo.h"
 
 @class FIRAuthTokenResult;
@@ -109,6 +110,8 @@ NS_SWIFT_NAME(User)
     @brief Metadata associated with the Firebase user in question.
  */
 @property(nonatomic, readonly, nonnull) FIRUserMetadata *metadata;
+
+@property(nonatomic, readonly, nonnull) FIRMultiFactor *multiFactor;
 
 /** @fn init
     @brief This class should not be instantiated.
@@ -478,6 +481,13 @@ DEPRECATED_MSG_ATTRIBUTE("Please use linkWithCredential:completion: for Objectiv
 
  */
 - (void)deleteWithCompletion:(nullable FIRUserProfileChangeCallback)completion;
+
+- (void)sendEmailVerificationBeforeUpdatingEmail:(nonnull NSString *)email
+                                      completion:(nullable FIRAuthVoidErrorCallback)completion;
+
+- (void)sendEmailVerificationBeforeUpdatingEmail:(nonnull NSString *)email
+                              actionCodeSettings:(nonnull FIRActionCodeSettings *)actionCodeSettings
+                                      completion:(nullable FIRAuthVoidErrorCallback)completion;
 
 @end
 
