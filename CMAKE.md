@@ -16,7 +16,7 @@ For dependencies:
 
   * Go
   * Perl
-  * Yasm (Windows-only)
+  * Nasm (Windows-only)
 
 
 ### macOS
@@ -68,7 +68,7 @@ choco install ninja  # optional
 
 choco install activeperl
 choco install golang
-choco install yasm
+choco install nasm
 ```
 
 ## Building
