@@ -18,13 +18,15 @@ if(TARGET grpc)
   return()
 endif()
 
+set(version 1.25.0)
+
 ExternalProject_Add(
   grpc-download
 
   DOWNLOAD_DIR ${FIREBASE_DOWNLOAD_DIR}
-  DOWNLOAD_NAME grpc-1.24.3.tar.gz
-  URL https://github.com/grpc/grpc/archive/v1.24.3.tar.gz
-  URL_HASH SHA256=c84b3fa140fcd6cce79b3f9de6357c5733a0071e04ca4e65ba5f8d306f10f033
+  DOWNLOAD_NAME grpc-${version}.tar.gz
+  URL https://github.com/grpc/grpc/archive/v${version}.tar.gz
+  URL_HASH SHA256=ffbe61269160ea745e487f79b0fd06b6edd3d50c6d9123f053b5634737cf2f69
 
   PREFIX ${PROJECT_BINARY_DIR}
   SOURCE_DIR ${PROJECT_BINARY_DIR}/src/grpc
