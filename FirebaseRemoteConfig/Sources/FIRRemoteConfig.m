@@ -326,7 +326,11 @@ static NSMutableDictionary<NSString *, NSMutableDictionary<NSString *, FIRRemote
 }
 
 - (void)updateExperiments {
-  [self->_configExperiment updateExperiments];
+  NSString *namespace =
+      [_FIRNamespace substringToIndex:[_FIRNamespace rangeOfString:@":"].location];
+  if ([namespace isEqualToString:FIRNamespaceGoogleMobilePlatform]) {
+    [self->_configExperiment updateExperiments];
+  }
 }
 
 #pragma mark - helpers

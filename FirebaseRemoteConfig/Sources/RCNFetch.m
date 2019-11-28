@@ -468,9 +468,15 @@ static RCNConfigFetcherTestBlock gGlobalTestBlock;
         // Update config content to cache and DB.
         [self->_content updateConfigContentWithResponse:fetchedConfig
                                            forNamespace:self->_FIRNamespace];
-        // Update experiments.
-        [strongSelf->_experiment
-            updateExperimentsWithResponse:fetchedConfig[RCNFetchResponseKeyExperimentDescriptions]];
+        // Update experiments on the firebase namespace, unless it is a no_change.
+        NSString *state = fetchedConfig[RCNFetchResponseKeyState];
+        NSString *namespace =
+            [_FIRNamespace substringToIndex:[_FIRNamespace rangeOfString:@":"].location];
+        if ([namespace isEqualToString:FIRNamespaceGoogleMobilePlatform] &&
+            ![state isEqualToString:RCNFetchResponseKeyStateNoChange]) {
+          [strongSelf->_experiment updateExperimentsWithResponse:
+                                       fetchedConfig[RCNFetchResponseKeyExperimentDescriptions]];
+        }
       } else {
         FIRLogDebug(kFIRLoggerRemoteConfig, @"I-RCN000063",
                     @"Empty response with no fetched config.");

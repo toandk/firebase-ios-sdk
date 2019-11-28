@@ -148,6 +148,8 @@ static NSString *const kMethodNameLatestStartTime =
 }
 
 - (void)updateExperimentsWithResponse:(NSArray<NSDictionary<NSString *, id> *> *)response {
+  FIRLogDebug(kFIRLoggerRemoteConfig, @"I-RCN000072",
+              @"Fetch response has %lu experiments. Updating.", (unsigned long)response.count);
   // cache fetched experiment payloads.
   [_experimentPayloads removeAllObjects];
   [_DBManager deleteExperimentTableForKey:@RCNExperimentTableKeyPayload];
@@ -168,6 +170,8 @@ static NSString *const kMethodNameLatestStartTime =
                   @"Invalid experiment payload to be serialized.");
     }
 
+    FIRLogDebug(kFIRLoggerRemoteConfig, @"I-RCN000073", @"Inserting experiment data: %@",
+                experiment);
     [_DBManager insertExperimentTableWithKey:@RCNExperimentTableKeyPayload
                                        value:JSONPayload
                            completionHandler:nil];
@@ -184,6 +188,7 @@ static NSString *const kMethodNameLatestStartTime =
   // Update the last experiment start time with the latest payload.
   [self updateExperimentStartTime];
 
+  FIRLogDebug(kFIRLoggerRemoteConfig, @"I-RCN000074", @"Updating experiments");
   [self.experimentController
       updateExperimentsWithServiceOrigin:kServiceOrigin
                                   events:lifecycleEvent
