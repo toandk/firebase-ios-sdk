@@ -1,3 +1,6 @@
+# v4.4.7
+- [changed] default MinimumFetch interval from 12 hours to 1 minute
+
 # v4.4.6
 - [fixed] Fix the return status code when app is offline. (#4100)
 - [changed] Internal code cleanup. (#4297, #4403, #4379)
