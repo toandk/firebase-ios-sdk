@@ -13,7 +13,8 @@ supports email and password accounts, as well as several 3rd party authenticatio
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
+    :branch => 'release-6.17.0',
     :tag => 'Auth-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'

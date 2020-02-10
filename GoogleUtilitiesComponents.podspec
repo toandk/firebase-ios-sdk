@@ -14,7 +14,8 @@ Not intended for direct public usage.
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
+    :branch => 'release-6.17.0',
     :tag => 'UtilitiesComponents-' + s.version.to_s
   }
 

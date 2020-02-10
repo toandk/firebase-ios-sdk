@@ -13,7 +13,8 @@ See more product details at https://firebase.google.com/products/in-app-messagin
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
+    :branch => 'release-6.17.0',
     :tag => 'InAppMessaging-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'

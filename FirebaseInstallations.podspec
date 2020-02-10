@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
+    :branch => 'release-6.17.0',
     :tag => 'Installations-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'

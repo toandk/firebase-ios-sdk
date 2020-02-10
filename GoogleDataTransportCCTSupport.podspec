@@ -13,7 +13,8 @@ Support library to provide event prioritization and uploading for the GoogleData
   s.license          = { :type => 'Apache', :file => 'LICENSE' }
   s.authors          = 'Google, Inc.'
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
+    :branch => 'release-6.17.0',
     :tag => 'DataTransportCCTSupport-' + s.version.to_s
   }
 
