@@ -32,7 +32,7 @@ static NSString *const RCNInternalMetadataAllPackagesPrefix = @"all_packages";
 /// HTTP connection default timeout in seconds.
 static const NSTimeInterval RCNHTTPDefaultConnectionTimeout = 60;
 /// Default duration of how long config data lasts to stay fresh.
-static const NSTimeInterval RCNDefaultMinimumFetchInterval = 43200;
+static const NSTimeInterval RCNDefaultMinimumFetchInterval = 60;
 
 /// Label for serial queue for read/write lock on ivars.
 static const char *RCNRemoteConfigQueueLabel = "com.google.GoogleConfigService.FIRRemoteConfig";

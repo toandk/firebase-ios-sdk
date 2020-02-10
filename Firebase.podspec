@@ -113,7 +113,7 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
 
   s.subspec 'Messaging' do |ss|
     ss.dependency 'Firebase/CoreOnly'
-    ss.dependency 'FirebaseMessaging', '~> 4.2.1'
+    ss.dependency 'FirebaseMessaging', '~> 4.2.0'
     # Standard platforms PLUS watchOS.
     ss.ios.deployment_target = '8.0'
     ss.osx.deployment_target = '10.11'
