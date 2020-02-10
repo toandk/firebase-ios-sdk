@@ -1,5 +1,6 @@
 {
     "Firebase":"6.16.1",
+    "FirebaseRemoteConfig":"4.4.7",
     "FirebaseAuth":"6.4.3",
     "FirebaseCore":"6.6.1",
     "FirebaseCrashlytics":"4.0.0-beta.2",
