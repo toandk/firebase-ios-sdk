@@ -127,7 +127,7 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
 
   s.subspec 'RemoteConfig' do |ss|
     ss.dependency 'Firebase/CoreOnly'
-    ss.dependency 'FirebaseRemoteConfig', :git => 'https://github.com/toandk/firebase-ios-sdk.git'
+    ss.dependency 'FirebaseRemoteConfigV2'
   end
 
   s.subspec 'Storage' do |ss|
