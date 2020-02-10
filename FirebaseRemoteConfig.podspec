@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FirebaseRemoteConfig'
-  s.version          = '4.4.7'
+  s.version          = '4.4.71'
   s.summary          = 'Firebase RemoteConfig for iOS'
 
   s.description      = <<-DESC
@@ -15,7 +15,7 @@ app update.
 
   s.source           = {
     :git => 'https://github.com/toandk/firebase-ios-sdk.git',
-    :branch => 'release-6.17.0'
+    :tag => 'RemoteConfig-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'
   s.ios.deployment_target = '8.0'
