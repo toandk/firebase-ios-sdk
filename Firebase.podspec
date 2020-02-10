@@ -13,8 +13,8 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
 
   s.source           = {
     :git => 'https://github.com/toandk/firebase-ios-sdk.git',
-    :branch => 'release-6.17.0',
-    :tag => s.version.to_s
+    :branch => 'release-6.17.0'
+    # :tag => s.version.to_s
   }
 
   s.preserve_paths = [

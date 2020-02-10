@@ -15,8 +15,7 @@ app update.
 
   s.source           = {
     :git => 'https://github.com/toandk/firebase-ios-sdk.git',
-    :branch => 'release-6.17.0',
-    :tag => 'RemoteConfig-' + s.version.to_s
+    :branch => 'release-6.17.0'
   }
   s.social_media_url = 'https://twitter.com/Firebase'
   s.ios.deployment_target = '8.0'

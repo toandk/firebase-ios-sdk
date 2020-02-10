@@ -17,8 +17,8 @@ Firebase Cloud Messaging and Firebase Remote Config in your app.
 
   s.source           = {
     :git => 'https://github.com/toandk/firebase-ios-sdk.git',
-    :branch => 'release-6.17.0',
-    :tag => 'ABTesting-' + s.version.to_s
+    :branch => 'release-6.17.0'
+    # :tag => 'ABTesting-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'
   s.ios.deployment_target = '8.0'
