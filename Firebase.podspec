@@ -128,7 +128,7 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
 
   s.subspec 'RemoteConfig' do |ss|
     ss.dependency 'Firebase/CoreOnly'
-    ss.dependency 'FirebaseRemoteConfig', '~> 4.4.6'
+    ss.dependency 'FirebaseRemoteConfig', '~> 4.4.7'
   end
 
   s.subspec 'Storage' do |ss|
