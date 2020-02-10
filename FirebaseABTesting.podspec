@@ -16,7 +16,7 @@ Firebase Cloud Messaging and Firebase Remote Config in your app.
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
     :tag => 'ABTesting-' + s.version.to_s
   }
   s.social_media_url = 'https://twitter.com/Firebase'

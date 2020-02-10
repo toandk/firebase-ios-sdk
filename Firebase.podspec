@@ -12,7 +12,7 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
   s.authors          = 'Google, Inc.'
 
   s.source           = {
-    :git => 'https://github.com/firebase/firebase-ios-sdk.git',
+    :git => 'https://github.com/toandk/firebase-ios-sdk.git',
     :tag => s.version.to_s
   }
 
@@ -128,7 +128,7 @@ Simplify your iOS development, grow your user base, and monetize more effectivel
 
   s.subspec 'RemoteConfig' do |ss|
     ss.dependency 'Firebase/CoreOnly'
-    ss.dependency 'FirebaseRemoteConfig', '~> 4.4.7'
+    ss.dependency 'FirebaseRemoteConfig', '~> 4.4.6'
   end
 
   s.subspec 'Storage' do |ss|
